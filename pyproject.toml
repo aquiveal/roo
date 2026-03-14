@@ -1,0 +1,34 @@
+[project]
+name = "roo"
+version = "2026.1.0"
+description = "A tool to help manage Roo Code rules files using submodules and symlinks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "aquiveal" },
+]
+dependencies = [
+    "typer[all]>=0.12.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+roo = "roo.cli:app"
+
+[tool.pdm]
+distribution = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-mock>=3.15.1",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

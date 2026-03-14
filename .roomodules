@@ -1,0 +1,9 @@
+[submodule ".roobase"]
+	path = .roobase
+	url = https://github.com/aquiveal/.roo
+[submodule ".roo/base"]
+	path = .roo/base
+	url = https://github.com/aquiveal/.roo
+[submodule ".roo/rules/python"]
+	path = .roo/rules/python
+	url = file:///.roo/base/rules/python/
